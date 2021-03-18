@@ -6,24 +6,22 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
   gap: 2rem;
-
-  border-bottom: 1px solid #eee;
   padding: 2rem;
+  border-bottom: 1px solid #eee;
 
   &__container {
+    width: 50%;
+    max-width: 30rem;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    min-width: 50%;
-    gap: 2rem;
   }
 
   &__action {
-    width: 10rem;
-    cursor: pointer;
+    width: 15rem;
     transition: all 0.1s ease;
+    cursor: pointer;
 
     & > p {
       transition: all 0.1s ease;
@@ -32,13 +30,13 @@
     & > svg {
       width: 2rem;
       height: 2rem;
-      transition: all 0.1s ease;
       margin-bottom: 0.5rem;
+      transition: all 0.1s ease;
     }
 
     &:hover {
-      transform: scale(1.05);
       font-weight: bold;
+      transform: scale(1.05);
 
       & > p,
       > svg > svg > :last-child {

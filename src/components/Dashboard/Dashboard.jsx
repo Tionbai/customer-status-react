@@ -33,7 +33,7 @@ const Dashboard = () => {
   };
 
   return (
-    <section className="Dashboard">
+    <section className="Dashboard text">
       <div className="Dashboard__container large">
         <div
           role="presentation"
