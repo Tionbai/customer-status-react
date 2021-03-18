@@ -38,5 +38,5 @@ const CustomersProvider = ({ children }) => {
 export { useCustomers, CustomersProvider };
 
 CustomersProvider.propTypes = {
-  children: Object(PropTypes.array).isRequired,
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
 };
