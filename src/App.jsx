@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Progress from './components/Progress/Progress';
 import Dashboard from './components/Dashboard/Dashboard';
 import { CustomersProvider } from './contexts/CustomersProvider';

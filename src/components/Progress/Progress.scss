@@ -1,6 +1,7 @@
 .Progress {
   display: flex;
   gap: 5rem;
+  margin: 1rem;
   padding: 2rem;
   background: white;
   background-color: var(--clr-primary-light);
@@ -30,6 +31,17 @@
 
     &:hover {
       transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+
+    &__status {
+      border-right: none;
+      padding-right: 0;
+      padding-bottom: 5rem;
+      border-bottom: 1px solid #191919;
     }
   }
 }

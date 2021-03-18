@@ -5,7 +5,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   gap: 2rem;
 
@@ -14,9 +14,9 @@
 
   &__container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    width: 50%;
+    min-width: 50%;
     gap: 2rem;
   }
 
@@ -43,6 +43,18 @@
       & > p,
       > svg > svg > :last-child {
         color: var(--clr-primary);
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    position: static;
+    margin-bottom: 5rem;
+    gap: 1rem;
+
+    &__action {
+      & > p {
+        display: none;
       }
     }
   }
