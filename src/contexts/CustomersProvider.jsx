@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import customerData from '../customerData.json';
 
@@ -10,19 +10,10 @@ const useCustomers = () => {
 };
 
 const CustomersProvider = ({ children }) => {
-  const [lastIndexIsTrue, setLastIndexIsTrue] = useState(false);
   const [selectedCustomerIndex, setSelectedCustomerIndex] = useState(0);
-
-  useEffect(() => {
-    const lastIndexIsTrueFn = () => {
-      return selectedCustomerIndex === customerData.length - 1;
-    };
-    setLastIndexIsTrue(lastIndexIsTrueFn);
-  }, [selectedCustomerIndex]);
 
   const value = {
     customers: customerData,
-    lastIndexIsTrue,
     lastIndex: customerData.length - 1,
     selectedCustomer: customerData[selectedCustomerIndex],
     selectedCustomerIndex,

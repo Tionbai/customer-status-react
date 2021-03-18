@@ -6,6 +6,7 @@ import {
   arrowForward,
   arrowPlay,
 } from '../../contexts/IconsProvider';
+import DashboardItem from './DashboardItem';
 
 const Dashboard = () => {
   const {
@@ -35,44 +36,30 @@ const Dashboard = () => {
   return (
     <section className="Dashboard text">
       <div className="Dashboard__container large">
-        <div
-          role="presentation"
+        <DashboardItem
           className={`Dashboard__action ${
             selectedCustomerIndex === 0 ? 'disabled' : ''
           }`}
-          onClick={
-            selectedCustomerIndex > 0
-              ? (e) => handleClick(e, selectedCustomerIndex - 1)
-              : null
-          }
-        >
-          <svg>{arrowBack}</svg>
-          <p>Previous customer</p>
-        </div>
-        <div
-          role="presentation"
+          icon={arrowBack}
+          text="Previous customer"
+          handleClick={(e) => handleClick(e, selectedCustomerIndex - 1)}
+        />
+        <DashboardItem
           className={`Dashboard__action ${
             selectedCustomerIndex === lastIndex ? 'disabled' : ''
           }`}
-          onClick={
-            selectedCustomerIndex < lastIndex
-              ? (e) => handleClick(e, selectedCustomerIndex + 1)
-              : null
-          }
-        >
-          <svg>{arrowForward}</svg>
-          <p>Next customer</p>
-        </div>
+          icon={arrowForward}
+          text="Next customer"
+          handleClick={(e) => handleClick(e, selectedCustomerIndex + 1)}
+        />
       </div>
       <div className="Dashboard__container small">
-        <div
-          role="presentation"
+        <DashboardItem
           className="Dashboard__action"
-          onClick={handleClickPlay}
-        >
-          <svg>{arrowPlay}</svg>
-          <p>Play loop</p>
-        </div>
+          icon={arrowPlay}
+          text="Play loop"
+          handleClick={handleClickPlay}
+        />
       </div>
     </section>
   );
