@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
-import customerData from '../customerData.json';
 
 const CustomersContext = React.createContext();
 
@@ -11,11 +10,28 @@ const useCustomers = () => {
 
 const CustomersProvider = ({ children }) => {
   const [selectedCustomerIndex, setSelectedCustomerIndex] = useState(0);
+  const [customersData, setCustomersData] = useState([]);
+
+  useEffect(() => {
+    const fetchCustomers = async () => {
+      try {
+        const res = await fetch('/data', {
+          method: 'GET',
+        });
+        const data = await res.json();
+        return setCustomersData(data);
+      } catch (err) {
+        return err;
+      }
+    };
+
+    fetchCustomers();
+  }, []);
 
   const value = {
-    customers: customerData,
-    lastIndex: customerData.length - 1,
-    selectedCustomer: customerData[selectedCustomerIndex],
+    customers: customersData,
+    lastIndex: customersData.length - 1,
+    selectedCustomer: customersData[selectedCustomerIndex],
     selectedCustomerIndex,
     setSelectedCustomerIndex,
   };

@@ -1,6 +1,6 @@
 # Customer status React
 
-A dynamic customer status card given customer status details created with Create React App.
+A dynamic customer status card given customer status details created with Create React App with an Express backend server.
 
 ## Installation
 
@@ -18,13 +18,25 @@ npm install
 
 ```
 
-### Start app
+### Install client from root directory
 
 ```bash
 
 
 
-npm start
+npm run install-client
+
+
+
+```
+
+### Start server and client from root directory
+
+```bash
+
+
+
+npm run dev
 
 
 
@@ -57,6 +69,8 @@ The app is provided with a dashboard top bar for development purposes. It is pro
 ## Tech stack
 
 [React.js](https://reactjs.org/)
+[Node.js](https://nodejs.org/en/)
+[Express](https://expressjs.com/)
 
 ## Contributing
 
