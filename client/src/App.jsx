@@ -7,8 +7,10 @@ import Progress from './components/Progress/Progress';
 const App = () => {
   const { customers } = useCustomers();
 
-  return !customers.length ? (
-    <main>Loading...</main>
+  return !customers && !customers.length ? (
+    <main className="App loading">
+      <div className="loading-bar">Loading...</div>
+    </main>
   ) : (
     <main className="App">
       <Dashboard />
