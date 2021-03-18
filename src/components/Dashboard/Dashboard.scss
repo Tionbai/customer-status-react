@@ -1,0 +1,54 @@
+.Dashboard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+
+  border-bottom: 1px solid #eee;
+  padding: 2rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 2rem;
+  }
+
+  &__action {
+    width: 10rem;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    & > p {
+      transition: all 0.1s ease;
+    }
+
+    & > svg {
+      width: 2rem;
+      height: 2rem;
+      transition: all 0.1s ease;
+      margin-bottom: 0.5rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      font-weight: bold;
+
+      & > p,
+      > svg > svg > :last-child {
+        color: var(--clr-primary);
+      }
+    }
+  }
+}
+
+.disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}

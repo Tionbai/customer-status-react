@@ -1,13 +1,44 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,800;1,400;1,700&display=swap");
+
+*,
+*:before,
+*:after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  background: none;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  color: #121212;
+  font-family: "Nunito", Verdana, sans-serif;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+:root {
+  --clr-primary: #2196f3;
+  --clr-primary-light: #daeeff;
+  --clr-secondary: "";
+  --clr-secondary-light: #eee;
+  --clr-success: #4caf50;
+  --clr-success-light: rgba(76, 175, 80, 0.1);
+  --btn-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --form-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --form-btn-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --card-warning-shadow: rgba(163, 163, 163, 0.2) 0px 1px 4px;
+  --card-success-shadow: var(--clr-primary-light) 0px 7px 29px 0px;
+  --card-neutral-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }

@@ -1,0 +1,46 @@
+.Progress {
+  display: flex;
+  gap: 5rem;
+  padding: 2rem;
+  background: white;
+  background-color: var(--clr-primary-light);
+  text-align: left;
+  border: 1px solid var(--clr-primary);
+  border-radius: 1rem;
+
+  &__status {
+    border-right: 1px solid #191919;
+    padding-right: 5rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__text--action {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--clr-primary);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  letter-spacing: 1.0125pt;
+}
