@@ -1,0 +1,55 @@
+.App {
+  min-width: 280px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 5rem;
+
+  &.loading {
+    justify-content: center;
+  }
+}
+
+.loading-bar {
+  letter-spacing: 1pt;
+  font-size: 1.5rem;
+  color: var(--clr-primary);
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.loading-bar:after {
+  position: absolute;
+  content: '';
+  display: block;
+  bottom: 0;
+  left: -6rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #fbae17;
+  transform-origin: 50%;
+  animation: bounce 500ms alternate infinite ease;
+}
+
+@keyframes bounce {
+  0% {
+    bottom: 0rem;
+    height: 1rem;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
+  }
+  35% {
+    height: 3rem;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    bottom: 3rem;
+  }
+}

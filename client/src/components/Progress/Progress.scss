@@ -40,6 +40,16 @@
     flex: 1;
   }
 
+  &__icon {
+    min-width: 2rem;
+    width: 2rem;
+    height: 2rem;
+    
+    & > svg > :last-child {
+      color: var(--clr-primary);
+    }
+  }
+  
   &__title {
     margin-bottom: 1rem;
     font-size: clamp(1rem, calc(1rem + 1vw), 1.3rem);
@@ -61,7 +71,7 @@
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     gap: 2rem;
     max-width: 100%;
