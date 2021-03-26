@@ -52,7 +52,7 @@
     "lat": 59.822500,
     "lon": 10.843900,
     "status": "Endelig tilbud opprettet",
-    "kundeaksjonspunkt": "Godta endelig til bud og planlegg overtagelsesdato"
+    "kundeaksjonspunkt": "Godta endelig tilbud og velg overtakelsesdato"
   },
   {
     "adresse": "Gunnar Schjelderups vei 13 E, 0485 Oslo",
@@ -62,7 +62,7 @@
     "soverom": 2,
     "lat": 59.950540,
     "lon": 10.775550,
-    "status": "Venter på overtagelse",
+    "status": "Venter på overtakelse",
     "kundeaksjonspunkt": "Fyll ut egenerklæringsskjema"
   },
   {
