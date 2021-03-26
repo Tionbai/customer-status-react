@@ -1,25 +1,52 @@
 .Progress {
+  background: white;
+  max-width: 100%;
   display: flex;
   gap: 5rem;
-  margin: 1rem;
   padding: 2rem;
   text-align: left;
-  background-color: var(--clr-primary-light);
-  border: 1px solid var(--clr-primary);
   border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   &__status {
-    padding-right: 5rem;
-    border-right: 1px solid #191919;
+    min-width: 9rem;
+    max-width: 25%;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -2rem;
+      height: 100%;
+      width: 2px;
+      background: rgba(0, 0, 0, 0.23);
+      z-index: 2;
+    }
+
+    &:after {
+      content: none;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 2px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.23);
+      z-index: 2;
+    }
+  }
+
+  &__action {
+    flex: 1;
   }
 
   &__title {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, calc(1rem + 1vw), 1.3rem);
   }
 
   &__text--action {
-    flex-wrap: wrap;
+    min-width: 100%;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -27,21 +54,32 @@
     font-weight: bold;
     color: var(--clr-primary);
     cursor: pointer;
-    transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
 
   @media (max-width: 480px) {
     flex-direction: column;
+    gap: 2rem;
+    max-width: 100%;
+    & > * {
+      flex: auto;
+      width: 100%;
+      min-width: 100%;
+    }
 
     &__status {
-      padding-bottom: 5rem;
+      padding-bottom: 2rem;
       padding-right: 0;
-      border-bottom: 1px solid #191919;
-      border-right: none;
+      &:before {
+        content: none;
+      }
+      &:after {
+        content: '';
+      }
     }
   }
 }
@@ -53,11 +91,7 @@
 }
 
 .text {
-  font-size: 1.3rem;
+  font-size: clamp(0.9rem, calc(0.9rem + 1vw), 1.1rem);
   line-height: 1.6;
-  letter-spacing: 1pt;
-
-  @media (max-width: 480px) {
-    font-size: clamp(1rem, calc(1rem + 1vw), 1.1rem);
-  }
+  letter-spacing: 0.05pt;
 }
